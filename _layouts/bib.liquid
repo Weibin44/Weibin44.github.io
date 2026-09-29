@@ -251,6 +251,8 @@
       {% endif %}
       {% if entry.code %}
         <a href="{{ entry.code }}" class="btn btn-sm z-depth-0" role="button">Code</a>
+      {% elsif entry.code_coming_soon %}
+        <span class="btn btn-sm z-depth-0" aria-disabled="true" title="Code is being prepared for release" style="border: 1px solid var(--global-text-color-light); color: var(--global-text-color-light); cursor: default; margin-left: 0; padding: 0.25rem 1rem;">Code coming soon</span>
       {% endif %}
       {% if entry.poster %}
         {% if entry.poster contains '://' %}

@@ -8,10 +8,17 @@ overrides:
     upstream_sha256: c8663513baded68d9fa5fbe4d6363a976535bbe201efe5138243d0ff03101058
     local_sha256: 627c82fe6b7d10360c030acf2182fe0811f3983f1802f2c03922eaaab68b25f8
     acknowledged_at: '2026-09-28'
+  _layouts/about.liquid:
+    owner: al_folio_core
+    gem_version: 1.0.15
+    upstream_path: _layouts/about.liquid
+    upstream_sha256: 2c28eb83b71fe65f252202c11f0b4a19a9b6f1faccdc870b4f91c4ea51d0c6f1
+    local_sha256: 48b0445fe1efc877836a66ba26cdbff3368dc0f96d78d88898da144195751bab
+    acknowledged_at: '2026-09-29'
   _layouts/bib.liquid:
     owner: al_folio_core
     gem_version: 1.0.15
     upstream_path: _layouts/bib.liquid
     upstream_sha256: f3c547969ef76219ca1eb21df09dce5a3daf32a1f491b1586f68e3213fa35f53
-    local_sha256: dbd097adba596e9367ca46d47cf6fcb2a700980e6568ae123a2d994978e23d72
-    acknowledged_at: '2026-09-28'
+    local_sha256: 9249e6d7c9e2590ce994371e486535542548c8782c20755ae2a60b3e6ce7c067
+    acknowledged_at: '2026-09-29'

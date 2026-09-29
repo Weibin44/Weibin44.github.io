@@ -34,7 +34,7 @@ ssh -N -L 8088:127.0.0.1:8088 your-user@your-server
 | 组件                   | 修改位置                                               | 说明                                                     |
 | ---------------------- | ------------------------------------------------------ | -------------------------------------------------------- |
 | 姓名、网址、语言、页脚 | `_config.yml`                                          | 当前姓名和网址已保留你的设置                             |
-| 首页简介与布局开关     | `_pages/about.md`                                      | 保留原版内容结构                                         |
+| 首页简介与布局开关     | `_pages/about.md`                                      | `profile.social` 控制照片下的社交图标；示例地址已注释    |
 | 头像                   | `assets/img/prof_pic.jpg`                              | 或修改首页的 `profile.image`                             |
 | News 动态              | `_news/`                                               | 一条动态一个 Markdown，按 date 排序                      |
 | 首页动态显示           | 首页的 `announcements`                                 | `enabled`、`limit`、`scrollable`                         |
@@ -45,7 +45,7 @@ ssh -N -L 8088:127.0.0.1:8088 your-user@your-server
 | Projects               | `_projects/` 与 `_pages/projects.md`                   | 原版项目卡片、分类与详情示例                             |
 | CV                     | `_data/cv.yml` 与 `_pages/cv.md`                       | 当前恢复的是模板示例简历                                 |
 | 简历 PDF               | `assets/pdf/`                                          | 下载路径在 `_pages/cv.md` 的 `cv_pdf` 中                 |
-| 邮箱与社交账号         | `_data/socials.yml`                                    | 当前保留示例值，请逐项替换                               |
+| 邮箱与社交账号         | `_data/socials.yml`                                    | 当前启用 GitHub 和 Scholar，其余示例账号已注释           |
 | Repositories           | `_data/repositories.yml`                               | 填写自己的 GitHub 用户名与仓库                           |
 | Teaching               | `_teachings/` 与 `_pages/teaching.md`                  | 保留原版示例                                             |
 | Books                  | `_books/` 与 `_pages/books.md`                         | 保留原版示例                                             |
@@ -74,6 +74,7 @@ Add your actual update here.
 ## 4. 论文、项目和简历
 
 - 论文：直接在 `_bibliography/papers.bib` 增删 BibTeX 条目。标题点击后打开该条目的 `html` 链接，悬停显示下划线；页面不显示单独的 HTML/PDF 按钮。`pdf` 可保留在条目中，指向 `assets/pdf/` 中的文件或完整 URL；`preview` 对应 `assets/img/publication_preview/` 中的图片；`code` 是代码链接。此显示方式由本站的 `_layouts/bib.liquid` 覆盖实现，主题升级后可用 `al-folio upgrade overrides audit` 检查。
+- 代码状态：在论文条目中使用 `code = {https://github.com/...}` 显示可点击的 Code；准备开源时使用 `code_coming_soon = {true}` 显示不可点击的 “Code coming soon”。发布代码后删除 `code_coming_soon` 并填写 `code`。
 - 精选论文：设置 `selected = {true}` 即可在首页展示。
 - 作者高亮：修改 `_config.yml` 的 `scholar.first_name`、`scholar.last_name`。
 - 项目：复制 `_projects/` 中喜欢的示例，修改标题、简介、`img`、`importance`、`category` 和正文；分类须与项目列表的 `display_categories` 一致。

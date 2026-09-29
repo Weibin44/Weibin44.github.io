@@ -34,9 +34,9 @@
 
 ## Step 2: Configure Deployment (1 min)
 
-1. Go to your new repository → **Settings** → **Actions** → **General** → **Workflow permissions**
-2. Select **Read and write permissions**
-3. Click **Save**
+1. Go to your new repository → **Settings** → **Pages** → **Build and deployment**
+2. Set **Source** to **GitHub Actions**
+3. The deployment workflow uses the repository's built-in `GITHUB_TOKEN`; no write permission setting is needed.
 
 ## Step 3: Personalize (2 min)
 
@@ -53,13 +53,9 @@
 
 ## Step 4: View Your Site (1 min)
 
-1. Go to your repository → **Actions** tab
-2. Wait for the "Deploy site" workflow to complete (look for a green checkmark, ~4 minutes)
-3. Go to **Settings** → **Pages** → **Build and deployment**
-4. Make sure **Source** is set to **Deploy from a branch**
-5. Set the branch to **gh-pages** (NOT main)
-6. Wait for the "pages-build-deployment" workflow to complete (~45 seconds)
-7. Visit `https://your-username.github.io` in your browser
+1. Push your changes to the `main` branch.
+2. Go to your repository → **Actions** tab and wait for the **Deploy personal website** workflow to complete.
+3. Visit `https://your-username.github.io` in your browser.
 
 **That's it!** Your site is live. You now have a working al-folio website.
 

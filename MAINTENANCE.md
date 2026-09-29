@@ -129,7 +129,7 @@ git remote add origin https://github.com/YOUR-USERNAME/YOUR-USERNAME.github.io.g
 git push -u origin main
 ```
 
-等待 Actions 构建完成后，在 `Settings → Pages` 选择 `Deploy from a branch → gh-pages → / (root)`。之后更新 `main` 并 push 会自动发布。不要手动编辑 `gh-pages`。
+在 GitHub 仓库的 `Settings → Pages → Build and deployment` 中，将 Source 设为 `GitHub Actions`。首次 push 到 `main` 后，等待 `Deploy personal website` 工作流完成；之后更新 `main` 并 push 会自动发布。
 
 发布前逐项替换模板的示例身份、论文、简历和账号。默认 GitHub Pages 域名和公开仓库可以免费托管。
 

@@ -116,6 +116,7 @@ pagination:
 
                     <p class="post-meta">
                       {{ read_time }} min read &nbsp; &middot; &nbsp;
+                      <span class="goatcounter-views" data-goatcounter-path="{{ post.url | relative_url }}" hidden></span>
                       <a href="{{ year | prepend: '/blog/' | relative_url }}">
                         <i class="fa-solid fa-calendar fa-sm"></i> {{ year }} </a>
                     </p>
@@ -174,6 +175,7 @@ pagination:
       <p class="post-meta">
         {{ read_time }} min read &nbsp; &middot; &nbsp;
         {{ post.date | date: '%B %d, %Y' }}
+        <span class="goatcounter-views" data-goatcounter-path="{{ post.url | relative_url }}" hidden></span>
         {% if post.external_source %}
         &nbsp; &middot; &nbsp; {{ post.external_source }}
         {% endif %}

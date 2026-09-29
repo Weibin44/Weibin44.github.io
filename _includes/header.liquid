@@ -155,3 +155,7 @@
     </progress>
   {% endif %}
 </header>
+{% if site.goatcounter_code %}
+  <script data-goatcounter="https://{{ site.goatcounter_code }}.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+  <script defer src="{{ '/assets/js/goatcounter-views.js' | relative_url }}"></script>
+{% endif %}

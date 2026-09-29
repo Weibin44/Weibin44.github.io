@@ -2,7 +2,9 @@
 layout: about
 title: about
 permalink: /
-# subtitle: Add a short affiliation or tagline here when ready.
+subtitle: >-
+  <strong>[Sep 2026]</strong> I am always open to <strong>internship opportunities</strong> involving <strong>research</strong> or <strong>open-source projects</strong>.
+  Please feel free to reach out if you think there may be a good fit.
 
 profile:
   align: right
@@ -29,9 +31,33 @@ latest_posts:
 ---
 
 <style>
+  .post-header .desc {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0.65rem 0 1.5rem;
+    padding: 0.85rem 1rem;
+    border: 1px solid rgba(181, 9, 172, 0.2);
+    border-left: 4px solid #b509ac;
+    border-radius: 0.35rem;
+    background: color-mix(in srgb, #b509ac 6%, var(--global-bg-color));
+    color: var(--global-text-color);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+
+  .post-header .desc strong {
+    font-weight: 600;
+  }
+
   @media (min-width: 576px) {
     .profile {
       width: 26%;
+    }
+
+    .post-header .desc {
+      width: 74%;
     }
   }
 </style>

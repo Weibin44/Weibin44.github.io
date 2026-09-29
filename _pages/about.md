@@ -126,8 +126,8 @@ Main research interests:
 
 - **Graph**: *impact of structural perturbations*
   1. **Edge sampling** — *Why drop edges at random?* [Moment-guided edge sampling]({{ '/projects/moment_guided_edge_sampling/' | relative_url }}) links local edge edits to global structure, providing an interpretable tool to visualize graph structure, preserve graph properties, and guide graph learning.
-  2. **Downstream application: (1) fake news propagation** — *How do fake and real news spread differently, and which edge edits make a propagation graph structurally more fake-like or real-like?* [Spectral Analysis of Fake News Propagation]({{ '/projects/spectral_fake_news/' | relative_url }}) uses spectral bounds to compare propagation structures and examines how edge edits change those bounds.
-- **LLM**: *efficient and effective LLM systems*
+  2. **Downstream application:**<br>**(1) fake news propagation** — *How do fake and real news spread differently, and which edge edits make a propagation graph structurally more fake-like or real-like?* [Spectral Analysis of Fake News Propagation]({{ '/projects/spectral_fake_news/' | relative_url }}) uses spectral bounds to compare fake and real news propagation, then studies how edge edits steer a propagation graph toward more fake-like or real-like structures.
+- **LLMs**: *efficient and effective LLM systems*
   1. **Efficient and effective RAG** — *When reranking becomes the bottleneck, can we reduce its budget without losing crucial evidence?* [PACE-RAG]({{ '/projects/pace_rag/' | relative_url }}) frontloads complementary evidence and adapts the reranking budget to serving pressure, improving evidence recall while reducing tail latency.
 - **Agent Memory** *(exploring)*
 

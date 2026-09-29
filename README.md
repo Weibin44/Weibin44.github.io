@@ -1,31 +1,32 @@
 # Personal website
 
-An English-language personal website built with [al-folio](https://github.com/alshedivat/al-folio), with About, Publications, Projects, and CV pages.
+Built with [al-folio](https://github.com/alshedivat/al-folio). The original English page structure and layout are preserved. News, blog posts, projects, publications, repository cards, and each retained CV data section contain at most two examples; collections with fewer entries are left as-is. Replace the demo content with your own information as needed.
 
-**Editing and deployment guide (Chinese): [MAINTENANCE.md](MAINTENANCE.md).**
+The original al-folio palette is used: purple in light mode and cyan in dark mode. Name and website URL are configured in `_config.yml`.
+
+**Editing, preview, and deployment guide (Chinese): [MAINTENANCE.md](MAINTENANCE.md).**
 
 ```bash
 bash scripts/preview.sh
 ```
 
-Preview on the server: http://127.0.0.1:8088 . Wait for the build with `docker compose logs -f` on first startup.
+Server preview: http://127.0.0.1:8088 . On first startup, wait for `Server running` in `docker compose logs -f`.
 
-For remote development, run this on your own computer (replace the SSH destination):
+For VS Code Remote SSH, forward port **8088** in the Ports panel. Alternatively, run this on your own computer:
 
 ```bash
 ssh -N -L 8088:127.0.0.1:8088 your-user@your-server
 ```
 
-Keep the terminal open, then visit http://localhost:8088 on your computer. VS Code Remote SSH users can instead forward port 8088 from the Ports panel.
+Keep the terminal open and visit http://localhost:8088 .
 
 ```bash
 bash scripts/build.sh   # Build the static site into _site/
-docker compose down    # Stop the local preview
+docker compose down    # Stop preview
 ```
-
-Personal information is clearly marked as placeholder content. Replace it before publishing. The GitHub Pages workflow is configured; no remote repository has been connected.
 
 - Template provenance: [TEMPLATE_VERSION](TEMPLATE_VERSION)
 - Upstream documentation: [docs/](docs/)
-- Content templates: [docs/content-templates/](docs/content-templates/)
 - License: [LICENSE](LICENSE)
+
+The navigation CV link downloads the PDF configured in `_data/socials.yml` (`cv_pdf`). It currently points to the template PDF; upload your own before publishing. The old `/cv/` URL redirects to that PDF.

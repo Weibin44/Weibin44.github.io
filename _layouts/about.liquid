@@ -34,8 +34,12 @@ layout: default
             cache_bust=true
           %}
         {% endif %}
+        {% if page.profile.email_user and page.profile.email_domain %}
+          {% assign profile_email = page.profile.email_user | append: '@' | append: page.profile.email_domain %}
+          <div class="profile-email">{% al_email_protect_link profile_email %}</div>
+        {% endif %}
         {% if page.profile.social %}
-          <div class="social profile-social" style="text-align: center; margin-top: 0.75rem;">
+          <div class="social profile-social" style="text-align: center; margin-top: 0.4rem;">
             <div class="contact-icons" style="display: flex; justify-content: center; gap: 1rem; font-size: 1.6rem;">{% social_links %}</div>
           </div>
         {% endif %}
@@ -45,30 +49,36 @@ layout: default
       </div>
     {% endif %}
 
-    <div class="clearfix">{{ content }}</div>
+    <div class="about-intro clearfix">{{ content }}</div>
 
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
-      <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
-      </h2>
-      {% include news.liquid limit=true %}
+      <section class="home-section" aria-labelledby="home-news-heading">
+        <h2 id="home-news-heading">
+          <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
+        </h2>
+        {% include news.liquid limit=true %}
+      </section>
     {% endif %}
 
     <!-- Latest posts -->
     {% if page.latest_posts and page.latest_posts.enabled %}
-      <h2>
-        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
-      </h2>
-      {% include latest_posts.liquid %}
+      <section class="home-section" aria-labelledby="home-posts-heading">
+        <h2 id="home-posts-heading">
+          <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
+        </h2>
+        {% include latest_posts.liquid %}
+      </section>
     {% endif %}
 
     <!-- Selected papers -->
     {% if page.selected_papers %}
-      <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
-      </h2>
-      {% include selected_papers.liquid %}
+      <section class="home-section" aria-labelledby="home-publications-heading">
+        <h2 id="home-publications-heading">
+          <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
+        </h2>
+        {% include selected_papers.liquid %}
+      </section>
     {% endif %}
 
     <!-- Social -->

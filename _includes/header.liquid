@@ -159,3 +159,18 @@
   <script data-goatcounter="https://{{ site.goatcounter_code }}.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
   <script defer src="{{ '/assets/js/goatcounter-views.js' | relative_url }}"></script>
 {% endif %}
+{% if page.article_toc %}
+  <link rel="stylesheet" href="{{ '/assets/css/article-toc.css' | relative_url }}">
+  <script defer src="{{ '/assets/js/article-toc.js' | relative_url }}"></script>
+{% endif %}
+{% if page.layout == 'distill' %}
+  {% if page.paper_url or page.github %}
+    <link rel="stylesheet" href="{{ '/assets/css/distill-title-links.css' | relative_url }}">
+    <script
+      defer
+      src="{{ '/assets/js/distill-title-links.js' | relative_url }}"
+      data-paper-url="{{ page.paper_url | escape }}"
+      data-github-url="{{ page.github | escape }}"
+    ></script>
+  {% endif %}
+{% endif %}

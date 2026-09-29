@@ -1,16 +1,33 @@
 ---
 ---
 
+@article{cai2026moment,
+  abbr        = {arXiv},
+  bibtex_show = {true},
+  title       = {Moment-guided edge sampling},
+  abstract    = {Edge sampling makes local decisions to achieve graph-level objectives, such as preserving structural properties. This creates a fundamental challenge: how can the effect of a local edge edit (i.e., edge addition or removal) on global graph structure be quantified and controlled? We address this challenge with a moment-guided edge sampling framework based on spectral moments of the random-walk transition matrix. We compute exact moment changes through two complementary methods: a combinatorial method with closed-form updates for low-order moments, and a low-rank method that exploits locality and cyclic trace invariance to compress computations to edited endpoints, supporting arbitrary moment orders and batched edits. For single-edge edits at fixed moment orders, the low-rank method reduces the cost from O(mn) to O(m), while the combinatorial method evaluates low-order changes in constant time given maintained local statistics. These moment changes provide interpretable structural signatures of local edge motifs that aggregate into graph-level fingerprints. This structural meaning motivates us to ask whether preserving moments also preserves the graph properties. We further derive and validate that moment-preserving sampling can retain related structural properties, including triangle-weighted clustering coefficient. These structural insights enable analysis and improvement of graph learning: different edge structures have distinct effects on supervised node classification, while moment-guided augmentation is competitive for graph contrastive learning. Together, these findings establish moments as an interpretable and controllable bridge from local edge edits to global graph structure and learning.},
+  author      = {Cai, Weibin and Zafarani, Reza},
+  journal     = {arXiv preprint arXiv:2609.30472},
+  year        = {2026},
+  html        = {https://arxiv.org/abs/2609.30472},
+  pdf         = {https://arxiv.org/pdf/2609.30472},
+  code        = {https://github.com/Weibin44/Moment-guided-graph-sampling},
+  selected    = {true},
+  preview     = {moment-guided-edge-sampling.png}
+}
+
 @article{cai2026less,
   abbr        = {arXiv},
   bibtex_show = {true},
   title       = {Less can be More: Relieving RAG Bottlenecks via Evidence Frontloading and Pressure-Adaptive Budgeting},
+  abstract    = {Existing methods for improving Retrieval-Augmented Generation (RAG) efficiency mainly optimize downstream LLM generation, such as context compression or serving optimization. However, RAG is an end-to-end system, and its bottleneck can shift between upstream reranking and downstream generation under different serving loads and reranking budgets. In this paper, we first empirically characterize this shifting-bottleneck behavior and show that upstream reranking can become the dominant bottleneck under high query rates or large reranking budgets. Reducing the reranking budget can relieve this bottleneck, but it may also drop supporting evidence and degrade recall. To address this problem, we propose PACE (Prioritized Adaptive Coverage of Evidence), a training-free framework that combines evidence frontloading with pressure-adaptive budgeting. PACE first reorders candidates by marginal evidence coverage, prioritizing documents that are query-relevant, complementary, and useful for forming multi-hop evidence chains. We show that this objective is monotone submodular, giving greedy selection a (1-1/e) approximation guarantee. PACE then dynamically adjusts the reranking budget according to the relative pressure of the reranker and the LLM. Experiments on three multi-hop QA datasets and online serving simulations show that PACE improves evidence recall, reduces p95 latency under ranking-heavy workloads. More importantly, the two components together reveal that less can be more: an evidence-dense top-ranked candidates enable higher final recall with fewer reranked documents.},
   author      = {Cai, Weibin and Zafarani, Reza},
   journal     = {arXiv preprint arXiv:2608.25115},
   year        = {2026},
   html        = {https://arxiv.org/abs/2608.25115},
   pdf         = {https://arxiv.org/pdf/2608.25115},
   code        = {https://github.com/Weibin44/PACE-RAG},
+  keywords    = {conference},
   selected    = {true},
   preview     = {pace-rag.png}
 }
@@ -19,6 +36,7 @@
   abbr        = {arXiv},
   bibtex_show = {true},
   title       = {When Does Demographic Information Help? Data and Modeling Regimes for Perspective-Aware Hate Speech Detection},
+  abstract    = {Demographic information is often used to model annotator perspectives in subjective tasks such as hate speech detection, but its benefit is inconsistent: it improves performance in some settings and behaves as noise in others. This paper asks when demographic features help. We analyze demographic gain as a function of both data split properties and modeling frameworks. For data splits, we measure annotator disagreement, namely how often annotators assign different labels to the same example, along with training size and train-test demographic coverage. We find that demographic gains concentrate in regimes with low training disagreement, high test disagreement, fine-grained ambiguity measurement, sufficient training data, and greater demographic overlap. Motivated by these regimes, we introduce a gated demographic residual model that treats demographics as a selective adjustment to text-only predictions. Experiments on MHS and POPQUORN show that this design is effective, especially on high disagreement or low confidence examples. Overall, our results suggest that demographics should not be assumed useful by default; their value depends jointly on the data regime and the modeling framework.},
   author      = {Cai, Weibin and Zafarani, Reza},
   journal     = {arXiv preprint arXiv:2605.27313},
   year        = {2026},
@@ -26,15 +44,19 @@
   pdf         = {https://arxiv.org/pdf/2605.27313}
 }
 
-@article{cai2026spectral,
+@inproceedings{cai2026spectral,
   abbr             = {SDM'26},
   bibtex_show      = {true},
   title            = {Spectral Analysis of Fake News Propagation},
+  abstract         = {How can we systematically represent the propagation of information? The propagation structure of fake news has been shown to be an important cue for detecting it; yet, existing propagation-based fake news detection methods have mainly relied on ad hoc topological features, and a unified view of cascade patterns is still lacking. To address this, we study news propagation from a spectral view by connecting graph spectra to propagation-related structural properties through rigorous spectral bounds. We introduce several new bounds and integrate them with existing bounds into a unified spectral representation of information propagation. We then use these spectral bounds for downstream classification and design a discrete structural optimization framework to interpret learned propagation patterns. For efficient optimization, we rely on a first-order perturbation approximation and consider both score-guided and bound-guided objectives. Experiments on real-world data reveal meaningful spectral differences between fake and real news, competitive classification performance, and interpretable evolution trajectories from structural optimization. The findings demonstrate the value of spectral analysis for understanding and modeling information propagation.},
   author           = {Cai, Weibin and Zafarani, Reza},
+  booktitle        = {Proceedings of the 2026 SIAM International Conference on Data Mining (SDM)},
+  location         = {Salt Lake City, USA},
   journal          = {arXiv preprint arXiv:2605.13861},
   year             = {2026},
   html             = {https://arxiv.org/abs/2605.13861},
   pdf              = {https://arxiv.org/pdf/2605.13861},
+  keywords         = {conference},
   code_coming_soon = {true},
   selected         = {true},
   preview          = {spectral_fake_news.png}
@@ -44,6 +66,7 @@
   abbr        = {arXiv},
   bibtex_show = {true},
   title       = {Seeing Hate Differently: Hate Subspace Modeling for Culture-Aware Hate Speech Detection},
+  abstract    = {Hate speech detection has been extensively studied, yet existing methods often overlook a real-world complexity: training labels are biased, and interpretations of what is considered hate vary across individuals with different cultural backgrounds. We first analyze these challenges, including data sparsity, cultural entanglement, and ambiguous labeling. To address them, we propose a culture-aware framework that constructs individuals' hate subspaces. To alleviate data sparsity, we model combinations of cultural attributes. For cultural entanglement and ambiguous labels, we use label propagation to capture distinctive features of each combination. Finally, individual hate subspaces, which in turn can further enhance classification performance. Experiments show our method outperforms state-of-the-art by 1.05% on average across all metrics.},
   author      = {Cai, Weibin and Zafarani, Reza},
   journal     = {arXiv preprint arXiv:2510.13837},
   year        = {2025},
@@ -51,13 +74,16 @@
   pdf         = {https://arxiv.org/pdf/2510.13837}
 }
 
-@article{cai2025unpacking,
+@inproceedings{cai2025unpacking,
   abbr             = {SDM'26},
   bibtex_show      = {true},
   title            = {Unpacking Hateful Memes: Presupposed Context and False Claims},
+  abstract         = {While memes are often humorous, they are frequently used to disseminate hate, causing serious harm to individuals and society. Current approaches to hateful meme detection mainly rely on pre-trained language models. However, less focus has been dedicated to what make a meme hateful. Drawing on insights from philosophy and psychology, we argue that hateful memes are characterized by two essential features: a presupposed context and the expression of false claims. To capture presupposed context, we develop PCM for modeling contextual information across modalities. To detect false claims, we introduce the FACT module, which integrates external knowledge and harnesses cross-modal reference graphs. By combining PCM and FACT, we introduce SHIELD, a hateful meme detection framework designed to capture the fundamental nature of hate. Extensive experiments show that SHIELD outperforms state-of-the-art methods across datasets and metrics, while demonstrating versatility on other tasks, such as fake news detection.},
   author           = {Cai, Weibin and Li, Jiayu and Zafarani, Reza},
+  booktitle        = {Proceedings of the 2026 SIAM International Conference on Data Mining (SDM)},
+  location         = {Salt Lake City, USA},
   journal          = {arXiv preprint arXiv:2510.09935},
-  year             = {2025},
+  year             = {2026},
   html             = {https://arxiv.org/abs/2510.09935},
   pdf              = {https://arxiv.org/pdf/2510.09935},
   code_coming_soon = {true},
@@ -68,6 +94,7 @@
   abbr        = {Master Thesis},
   bibtex_show = {true},
   title       = {Harnessing LLMs to Detect Hate Speech},
+  abstract    = {Hate is a sentiment, while hate speech refers to the expression of hate in a form that targets and attacks specific groups, such as race, religion, or gender. With the rise of the internet and social media, hate speech has spread rapidly, gaining wide exposure and posing threats to individual well-being, the profits of major tech companies, and social stability. As a result, both industry and academia have turned their attention to the study of hate speech. One of the most active areas is hate speech detection, which involves training models to predict whether a given piece of content is hateful. However, the choice of models and methods can vary depending on the form in which the hate speech is conveyed. In this thesis, we address two key issues: 1.In the task of hateful meme classification, many existing approaches focus on stacking model parameters to achieve better performance, but lack a deep understanding of how hateful memes are constructed. Furthermore, they have not effectively leveraged large language models (LLMs) for this task. 2.Although the definitions of hate and hate speech are well-established, individuals’ perceptions of hate can vary due to differences in cultural background. As a result, judgments about whether a piece of content is hateful may differ from person to person. However, current hate speech detection models typically rely on labels obtained through majority voting, without accounting for the cultural specificity of individual annotators. To address the first issue, we observe that creators of hateful memes often exaggerate their emotions and reinforce stereotypes, leading to a mismatch between the text and image within the meme. We refer to this phenomenon as a false claim. Based on this insight, we propose the FACT model(FAlse Claim haTeful meme classification model), a model built upon a large language model(LLM), which identifies false claims in memes to assist the classification process. To address the second issue, we first evaluate LLMs and find that they are unable to effectively utilize cultural background information to support reasoning, while historical labeling proves to be useful. Based on this, we hypothesize that an individual’s perception of hate is influenced by specific combinations of cultural background factors. To incorporate this insight, we apply matrix factorization techniques from recommender systems to learn interaction features for each cultural background combination. These features are then used to support culture-aware hate speech detection.},
   author      = {Cai, Weibin},
   school      = {Syracuse University},
   year        = {2025},
@@ -78,6 +105,7 @@
   abbr        = {ICONIP'24},
   bibtex_show = {true},
   title       = {Customized Multi-task Learning for Recommendation with Heterogeneous Graph Neural Network},
+  abstract    = {Graph neural networks are the popular deep learning techniques in heterogeneous graph-based recommender systems due to the capability to explore high-order structural information and heterogeneous semantics. Meanwhile, multi-task learning frameworks have been widely adopted in graph representation learning. However, most multi-task-based deep recommendation works mainly suffer from two limitations: interpretability and robustness. In this paper, we propose a customized multi-task learning framework (HMRec) to improve the accuracy and interpretability of recommendations with heterogeneous node classification. We delve into the intricate interplay between recommendation and classification tasks within the co-training framework, crafting a bespoke communication module imbued with adaptive feedback mechanisms to mitigate deleterious interference while enhancing the efficacy of recommendations. Through rigorous experimentation conducted on real-world datasets, we unveil the pronounced superiority of HMRec in comparison to cutting-edge benchmarks.},
   author      = {Wang, Linglong and Jiang, Zhen and Zhu, Yong and Cai, Weibin and Zhu, Fanwei and Chen, Tieming},
   booktitle   = {Neural Information Processing (ICONIP 2024)},
   pages       = {366--382},
@@ -91,6 +119,7 @@
   abbr        = {KDD'24},
   bibtex_show = {true},
   title       = {Dynamic Hotel Pricing at Online Travel Platforms: A Popularity and Competitiveness Aware Demand Learning Approach},
+  abstract    = {Dynamic pricing, which suggests the optimal prices based on the dynamic demands, has received considerable attention in academia and industry. On online hotel booking platforms, room demand fluctuates due to various factors, notably hotel popularity and competition. In this paper, we propose a dynamic pricing approach with popularity and competitiveness-aware demand learning. Specifically, we introduce a novel demand function that incorporates popularity and competitiveness coefficients to comprehensively model the price elasticity of demand. We develop a dynamic demand prediction network that focuses on learning these coefficients in the proposed demand function, enhancing the interpretability and accuracy of price suggestion. The model is trained in a multi-task framework that effectively leverages the correlations of demands among groups of similar hotels to alleviate data sparseness in room-level occupancy prediction. Comprehensive experiments conducted on real-world datasets validate the superiority of our method over state-of-the-art baselines in both demand prediction and dynamic pricing. Our model has been successfully deployed on a popular online travel platform, serving tens of millions of users and hoteliers.},
   author      = {Zhu, Fanwei and Xiao, Wendong and Yu, Yao and Liu, Zemin and Chen, Zulong and Cai, Weibin},
   booktitle   = {Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining},
   pages       = {4641--4651},
@@ -103,6 +132,7 @@
   abbr        = {SIGIR'23 Demo},
   bibtex_show = {true},
   title       = {{HeteroCS}: A Heterogeneous Community Search System with Semantic Explanation},
+  abstract    = {Community search, which looks for query-dependent communities in a graph, is an important task in graph analysis. Existing community search studies address the problem by finding a densely-connected subgraph containing the query. However, many real-world networks are heterogeneous with rich semantics. Queries in heterogeneous networks generally involve in multiple communities with different semantic connections, while returning a single community with mixed semantics has limited applications. In this paper, we revisit the community search problem on heterogeneous networks and introduce a novel paradigm of heterogeneous community search and ranking. We propose to automatically discover the query semantics to enable the search of different semantic communities and develop a comprehensive community evaluation model to support the ranking of results. We build HeteroCS, a heterogeneous community search system with semantic explanation, upon our semantic community model, and deploy it on two real-world graphs. We present a demonstration case to illustrate the novelty and effectiveness of the system.},
   author      = {Cai, Weibin and Zhu, Fanwei and Liu, Zemin and Wu, Minghui},
   booktitle   = {Proceedings of the 46th International ACM SIGIR Conference on Research and Development in Information Retrieval},
   pages       = {3155--3159},

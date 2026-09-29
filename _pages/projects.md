@@ -17,8 +17,33 @@ horizontal: false
     max-width: 440px;
   }
 
+  /* Let each card end after its own content instead of filling the tallest column. */
+  .projects .card.h-100 {
+    height: auto !important;
+  }
+
   .projects .card figure {
+    display: grid;
+    place-items: center;
+    aspect-ratio: 3 / 2;
+    max-height: 250px;
     margin-bottom: 0;
+    overflow: hidden;
+  }
+
+  .projects .card figure picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    min-height: 0;
+  }
+
+  .projects .card figure img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 
   .projects .card-body {

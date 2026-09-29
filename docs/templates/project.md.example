@@ -1,0 +1,28 @@
+---
+layout: page
+title: Your project title
+description: A short summary shown on the project card.
+img: assets/img/projects/your-project/cover.png
+importance: 1
+category: Research
+github: https://github.com/your-name/your-repository
+---
+
+A short introduction to the project.
+
+## Motivation
+
+Explain the problem.
+
+## Method
+
+Describe the implementation and show a figure if useful.
+
+## Results
+
+Show the outcome, paper link, or demo.
+
+## Resources
+
+- [Read the paper](https://example.com/paper)
+- [View the code](https://github.com/your-name/your-repository)

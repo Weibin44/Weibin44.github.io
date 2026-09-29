@@ -36,7 +36,7 @@ repo_theme_dark: dark # https://github.com/stats-organization/github-stats-exten
 # `user@host` and no `mailto:` for harvesters to scrape, and clicking one copies
 # it to the clipboard instead of opening a mail client.
 # See "Protecting email addresses from scrapers" in docs/CUSTOMIZE.md.
-protect_email: false
+protect_email: true
 
 # Off by default: the free public github-profile-trophy instance is disabled
 # (its Vercel deployment answers HTTP 402 / DEPLOYMENT_DISABLED), so every trophy
@@ -316,15 +316,39 @@ defaults:
       path: ""
       type: projects
     values:
+      article_toc: true
       _styles: |
         .post {
           max-width: 780px;
           margin-inline: auto;
         }
+        .post.distill { max-width: none; margin-inline: 0; }
+        .post.distill ol.bibliography { list-style: none; padding-left: 0; }
+        @media (max-width: 999px) {
+          .post.distill d-byline .byline {
+            grid-template-columns: minmax(0, 1fr);
+            row-gap: .75rem;
+          }
+          .post.distill d-byline .authors-affiliations {
+            grid-column: 1;
+            grid-template-columns: minmax(7rem, 1fr) minmax(0, 2fr);
+            column-gap: 1rem;
+            margin-bottom: 0;
+          }
+          .post.distill d-byline .byline > div:last-child { grid-column: 1; }
+          .post.distill d-byline .authors-affiliations .affiliation { overflow-wrap: anywhere; }
+        }
+        @media (min-width: 1000px) {
+          .post.distill d-byline .authors-affiliations {
+            grid-template-columns: 120px 200px;
+            column-gap: 16px;
+          }
+        }
   - scope:
       path: ""
       type: posts
     values:
+      article_toc: true
       _styles: |
         .post {
           max-width: 780px;

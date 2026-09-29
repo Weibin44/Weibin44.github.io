@@ -1,0 +1,26 @@
+---
+layout: post
+title: Your post title
+date: 2026-09-29
+description: A short summary shown on the blog listing.
+tags: research rag
+categories: research
+---
+
+A short introduction to the topic.
+
+## Background
+
+Explain the problem and why it matters.
+
+## Approach
+
+Describe what you tried. Add figures, code, or PDF links as needed.
+
+## Results
+
+Summarize the main findings.
+
+## Takeaways
+
+What did you learn, and what would you do next?

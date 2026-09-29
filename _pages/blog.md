@@ -16,6 +16,40 @@ pagination:
     after: 3 # The number of links after the current page
 ---
 
+<style>
+  /* Theme utility classes use a CSS layer; override them in that layer. */
+  @layer utilities {
+    div[role="main"].container.mt-5 {
+      margin-top: 0 !important;
+    }
+
+    .tag-category-list ul {
+      margin: 0 !important;
+    }
+  }
+
+  .tag-category-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+    padding: 0.875rem 0;
+  }
+
+  .tag-category-list ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.375rem 1.25rem;
+  }
+
+  .tag-category-list ul li {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+  }
+</style>
+
 <div class="post">
 
 {% assign blog_name_size = site.blog_name | size %}
@@ -32,27 +66,24 @@ pagination:
 {% if site.display_tags and site.display_tags.size > 0 or site.display_categories and site.display_categories.size > 0 %}
 
   <div class="tag-category-list">
-    <ul class="p-0 m-0">
-      {% for tag in site.display_tags %}
-        <li>
-          <i class="fa-solid fa-hashtag fa-sm"></i> <a href="{{ tag | slugify | prepend: '/blog/tag/' | relative_url }}">{{ tag }}</a>
-        </li>
-        {% unless forloop.last %}
-          <p>&bull;</p>
-        {% endunless %}
-      {% endfor %}
-      {% if site.display_categories.size > 0 and site.display_tags.size > 0 %}
-        <p>&bull;</p>
-      {% endif %}
-      {% for category in site.display_categories %}
-        <li>
-          <i class="fa-solid fa-tag fa-sm"></i> <a href="{{ category | slugify | prepend: '/blog/category/' | relative_url }}">{{ category }}</a>
-        </li>
-        {% unless forloop.last %}
-          <p>&bull;</p>
-        {% endunless %}
-      {% endfor %}
-    </ul>
+    {% if site.display_categories and site.display_categories.size > 0 %}
+      <ul class="p-0 m-0" aria-label="Blog categories">
+        {% for category in site.display_categories %}
+          <li>
+            <i class="fa-solid fa-tag fa-sm"></i> <a href="{{ category | slugify | prepend: '/blog/category/' | relative_url }}">{{ category }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+    {% if site.display_tags and site.display_tags.size > 0 %}
+      <ul class="p-0 m-0" aria-label="Blog tags">
+        {% for tag in site.display_tags %}
+          <li>
+            <i class="fa-solid fa-hashtag fa-sm"></i> <a href="{{ tag | slugify | prepend: '/blog/tag/' | relative_url }}">{{ tag }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
   </div>
   {% endif %}
 

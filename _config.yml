@@ -96,7 +96,7 @@ al_folio:
 # -----------------------------------------------------------------------------
 
 navbar_fixed: true
-footer_fixed: true
+footer_fixed: false # no footer; removes the theme's reserved bottom padding
 search_enabled: true
 socials_in_search: true
 posts_in_search: true
@@ -136,8 +136,8 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: al-folio # blog_name will be displayed in your blog page
-blog_description: a simple whitespace theme for academics
+blog_name: "" # leave empty to hide the blog header
+blog_description: ""
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
@@ -310,6 +310,24 @@ defaults:
       path: "assets"
     values:
       sitemap: false
+  - scope:
+      path: ""
+      type: projects
+    values:
+      _styles: |
+        .post {
+          max-width: 780px;
+          margin-inline: auto;
+        }
+  - scope:
+      path: ""
+      type: posts
+    values:
+      _styles: |
+        .post {
+          max-width: 780px;
+          margin-inline: auto;
+        }
 
 sass:
   style: compressed
@@ -350,8 +368,8 @@ jekyll-archives:
   books:
     enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
 
-display_tags: ["formatting", "images", "links"]
-display_categories: ["sample-posts"]
+display_tags: ["graph", "rag", "llms", "agent"]
+display_categories: ["research", "hobby", "engineering"]
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar

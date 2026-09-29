@@ -1,0 +1,8 @@
+{% assign preview_pdf = include.path | relative_url %}
+<figure data-pdf-preview="{{ preview_pdf }}" style="max-width: {{ include.width | default: '600px' }}; margin: 0 auto; text-align: center;">
+  <a href="{{ preview_pdf }}" target="_blank" rel="noopener" aria-label="Open {{ include.caption | default: 'PDF' }}">
+    <canvas style="display: none; width: 100%; height: auto;"></canvas>
+  </a>
+  <figcaption class="caption"><em>{{ include.caption }}</em></figcaption>
+</figure>
+<script type="module" src="{{ '/assets/js/pdf-preview.mjs' | relative_url }}"></script>

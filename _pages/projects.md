@@ -2,14 +2,75 @@
 layout: page
 title: projects
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: .
 nav: true
 nav_order: 3
-display_categories: [work, fun]
+display_categories: [Graph, LLMs]
 horizontal: false
 ---
 
 <!-- pages/projects.md -->
+
+<style>
+  .projects .card {
+    position: relative;
+    max-width: 440px;
+  }
+
+  .projects .card figure {
+    margin-bottom: 0;
+  }
+
+  .projects .card-body {
+    padding: 0.75rem 1.1rem 1rem;
+  }
+
+  .projects .card-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+    transition: color 0.2s ease;
+  }
+
+  .projects .card:hover .card-title {
+    color: var(--global-theme-color);
+  }
+
+  .projects .card-text {
+    font-size: 0.7rem;
+  }
+
+  .projects .github-icon {
+    position: absolute;
+    top: 0.65rem;
+    right: 0.65rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: var(--global-bg-color);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.16);
+  }
+
+  .projects .github-icon a {
+    color: var(--global-theme-color);
+  }
+
+  .projects .github-icon .gh-icon {
+    font-size: 1.1rem;
+  }
+
+  .projects h2.category {
+    color: var(--global-theme-color);
+    text-align: left;
+  }
+
+  .projects > a:first-of-type h2.category {
+    margin-top: 0.5rem;
+  }
+</style>
+
 <div class="projects">
 {% if site.enable_project_categories and page.display_categories %}
   <!-- Display categorized projects -->

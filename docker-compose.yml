@@ -1,0 +1,15 @@
+# Local preview: http://localhost:8088
+services:
+  jekyll:
+    image: amirpourmand/al-folio@sha256:31a8af846095e7bbb43981019af0400c3a3da79c9d6c44a5e5b871cfe6a115e7
+    command: /srv/jekyll/bin/entry_point.sh
+    ports:
+      - "127.0.0.1:8088:8080"
+      - "127.0.0.1:35729:35729"
+    volumes:
+      - .:/srv/jekyll
+      - bundle_cache:/usr/local/bundle
+    environment:
+      - JEKYLL_ENV=development
+volumes:
+  bundle_cache:

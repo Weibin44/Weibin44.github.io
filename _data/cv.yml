@@ -1,0 +1,24 @@
+cv:
+  name: Your Name
+  label: Research area / Target role (to add)
+  summary: Add your actual education, experience, and skills.
+  sections:
+    Education:
+      - institution: "To add: institution"
+        area: "To add: field of study"
+        studyType: "To add: degree"
+        highlights:
+          - "To add: research topic, advisor, or relevant coursework"
+    Experience:
+      - company: "To add: lab or company"
+        position: "To add: role"
+        summary: "To add: responsibilities"
+        highlights:
+          - "To add: individual contributions"
+          - "To add: outcomes or measurable impact"
+    Skills:
+      - name: "To add: skill category"
+        keywords: "To add: tools, methods, and proficiency"
+    Languages:
+      - name: "To add: language"
+        summary: "To add: proficiency"

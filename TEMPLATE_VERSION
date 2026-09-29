@@ -1,0 +1,5 @@
+al-folio
+Source: https://github.com/alshedivat/al-folio
+Commit: 40c06007dab344970b681ba63b2241b1a8209ec1
+Runtime: al_folio_core 1.0.15
+Docker: amirpourmand/al-folio@sha256:31a8af846095e7bbb43981019af0400c3a3da79c9d6c44a5e5b871cfe6a115e7

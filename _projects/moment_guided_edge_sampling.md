@@ -32,7 +32,7 @@ toc:
 
 <figure style="max-width: 680px; margin: 0 auto 1.5rem; text-align: center;">
   <img src="{{ '/assets/img/projects/graph/moment-guided-edge-sampling/moments_jojo.png' | relative_url }}" alt="JoJo illustration" style="display: block; width: 100%; height: auto;">
-  <figcaption style="margin-top: 0.5rem; font-style: italic; font-size: 1.5rem;">Moments was born from "spining steel balls".</figcaption>
+  <figcaption style="margin-top: 0.5rem; font-style: italic; font-size: 1.5rem;">"Spinning steel balls" offer an intuition for controling moments.</figcaption>
 </figure>
 
 This post shares **deeper reflections** that are not suitable for a research paper. 

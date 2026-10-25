@@ -19,3 +19,7 @@ vendor
 # Python bytecode from bin/ helper scripts
 __pycache__/
 *.pyc
+
+# Keep the agent memory draft and its bibliography local.
+/_posts/2026-10-01-agent-memory-tutorial.md
+/assets/bibliography/2026-10-01-agent-memory-tutorial.bib

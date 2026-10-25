@@ -6,6 +6,9 @@ description: .
 nav: true
 nav_order: 3
 display_categories: [Graph, LLMs]
+category_descriptions:
+  Graph: impact of structural perturbations
+  LLMs: efficient and effective LLM systems
 horizontal: false
 ---
 
@@ -91,6 +94,13 @@ horizontal: false
     text-align: left;
   }
 
+  .projects h2.category .category-subtitle {
+    margin-left: 0.55rem;
+    color: var(--global-text-color-light);
+    font-size: 0.5em;
+    font-weight: 400;
+  }
+
   .projects > a:first-of-type h2.category {
     margin-top: 0.5rem;
   }
@@ -101,7 +111,7 @@ horizontal: false
   <!-- Display categorized projects -->
   {% for category in page.display_categories %}
   <a id="{{ category }}" href=".#{{ category }}">
-    <h2 class="category">{{ category }}</h2>
+    <h2 class="category">{{ category }}{% assign category_description = page.category_descriptions[category] %}{% if category_description %}<em class="category-subtitle">{{ category_description }}</em>{% endif %}</h2>
   </a>
   {% assign categorized_projects = site.projects | where: "category", category %}
   {% assign sorted_projects = categorized_projects | sort: "importance" %}

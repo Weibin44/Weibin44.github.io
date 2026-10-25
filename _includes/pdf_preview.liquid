@@ -3,6 +3,6 @@
   <a href="{{ preview_pdf }}" target="_blank" rel="noopener" aria-label="Open {{ include.caption | default: 'PDF' }}">
     <canvas style="display: none; width: 100%; height: auto;"></canvas>
   </a>
-  <figcaption class="caption"><em>{{ include.caption }}</em></figcaption>
+  <figcaption class="caption"{% if include.caption_size %} style="font-size: {{ include.caption_size }};"{% endif %}><em>{{ include.caption }}</em></figcaption>
 </figure>
 <script type="module" src="{{ '/assets/js/pdf-preview.mjs' | relative_url }}"></script>

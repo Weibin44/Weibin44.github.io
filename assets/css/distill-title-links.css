@@ -47,3 +47,17 @@
     grid-column: span 2;
   }
 }
+
+.post.distill d-byline .project-last-modified {
+  margin-top: 0.75rem;
+}
+
+/* Give tall formulas room while keeping long equations horizontally scrollable. */
+.post.distill d-article mjx-container[jax="CHTML"][display="true"] {
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding-block: 0.5em;
+  overflow-x: auto;
+  overflow-y: hidden;
+}

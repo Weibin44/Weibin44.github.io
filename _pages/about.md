@@ -8,7 +8,7 @@ subtitle: >-
 
 profile:
   align: right
-  image: # Add your photo filename after placing it in assets/img/
+  image: prof_pic.jpg # Add your photo filename after placing it in assets/img/
   image_circular: false # crops the image to make it circular
   social: true # show enabled social icons below the profile email
   email_user: weibin44
@@ -101,7 +101,7 @@ latest_posts:
 
   @media (min-width: 576px) {
     .profile {
-      width: 26%;
+      width: 25%;
       margin-left: 0;
     }
 
@@ -129,7 +129,8 @@ Main research interests:
   2. **Downstream application:**<br>**(1) fake news propagation** — *How do fake and real news spread differently, and which edge edits make a propagation graph structurally more fake-like or real-like?* [Spectral Analysis of Fake News Propagation]({{ '/projects/spectral_fake_news/' | relative_url }}) uses spectral bounds to compare fake and real news propagation, then studies how edge edits steer a propagation graph toward more fake-like or real-like structures.
 - **LLMs**: *efficient and effective LLM systems*
   1. **Efficient and effective RAG** — *When reranking becomes the bottleneck, can we reduce its budget without losing crucial evidence?* [PACE-RAG]({{ '/projects/pace_rag/' | relative_url }}) frontloads complementary evidence and adapts the reranking budget to serving pressure, improving evidence recall while reducing tail latency.
-- **Agent Memory** *(exploring)*
+- **Personalization**:  
+  1. **Agent Memory** *(exploring)*
 
 
 <!--

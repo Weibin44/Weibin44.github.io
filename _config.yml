@@ -394,7 +394,7 @@ jekyll-archives:
   books:
     enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
 
-display_tags: ["graph", "rag", "llms", "agent"]
+display_tags: ["graph", "RAG", "LLMs", "agent", "memory", "personalization", "tutorial"]
 display_categories: ["research", "hobby", "engineering"]
 
 # -----------------------------------------------------------------------------

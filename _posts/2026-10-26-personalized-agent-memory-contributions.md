@@ -1,6 +1,6 @@
 ---
 layout: distill
-title: Contributions to personalized agent memory
+title: "Personalized Agent Memory: Findings and Contributions"
 description: A record of potential bug reports, code contributions, and research discussions.
 date: 2026-10-26
 last_modified_at: 2026-10-26
@@ -16,6 +16,7 @@ toc:
   - name: iAgent
   - name: PersonaMem-v3
   - name: Acknowledgment
+  - name: Cite this post
 ---
 
 {% capture introduction_note %}
@@ -105,3 +106,15 @@ With `Qwen2.5-1.5B-Instruct`, neither method consistently outperforms random ran
 ## Acknowledgment
 
 Thanks to [Weixin Chen](https://weixinchen.com/), author of [MemRec](https://github.com/rutgerswiselab/MemRec), for the discussions and exchange of ideas!
+
+## Cite this post
+
+```bibtex
+@misc{cai2026personalizedmemory,
+  author       = {Cai, Weibin},
+  title        = {Personalized Agent Memory: Findings and Contributions},
+  year         = {2026},
+  howpublished = {Personal blog},
+  url          = {https://weibin44.github.io/blog/2026/personalized-agent-memory-contributions/}
+}
+```

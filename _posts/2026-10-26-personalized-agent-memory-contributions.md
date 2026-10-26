@@ -20,7 +20,7 @@ toc:
 ---
 
 {% capture introduction_note %}
-As AI automates more research, papers are appearing faster, with widely varying quality. I want to slow down and build **useful, interesting projects that anyone can understand**. I also need a place to document and share my contributions, so I write posts like this one. My comments on others' work are not attacks. They reflect my own perspective and aim to help the field and those building on that work.
+As AI automates more research, papers are appearing faster, with widely varying quality. In this context, I believe that identifying a bug in existing work, whether in its implementation or reasoning, can be far more valuable than publishing another paper. This belief motivates me to slow down and focus on **useful, interesting projects that anyone can understand**. Posts like this give me a place to document and share these contributions, including those that may never become papers. When I discuss problems in others' work, my goal is to offer constructive feedback, not to attack anyone. I hope these discussions help the field progress and help others build on a sound foundation.
 {% endcapture %}
 {% include article_note.liquid content=introduction_note %}
 

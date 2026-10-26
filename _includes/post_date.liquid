@@ -1,0 +1,6 @@
+{%- assign modified_date = include.post.last_modified_at | default: include.post.last_updated -%}
+{%- assign display_date = modified_date | default: include.post.date -%}
+<span class="post-date">
+  {% if modified_date %}Last modified:{% else %}Published:{% endif %}
+  <time datetime="{{ display_date | date_to_xmlschema }}">{{ display_date | date: '%B %d, %Y' }}</time>
+</span>

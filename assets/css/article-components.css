@@ -1,0 +1,113 @@
+/* Shared article components for this personal site. */
+.post.distill {
+  max-width: none;
+  margin-inline: 0;
+}
+
+/* Keep affiliations spacious for one or several authors. */
+.post.distill d-byline .byline {
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: 2rem;
+  row-gap: 0.75rem;
+}
+
+.post.distill d-byline .authors-affiliations {
+  grid-column: 1;
+  grid-template-columns: minmax(100px, 1fr) minmax(0, 2fr);
+  column-gap: 1rem;
+  margin-bottom: 0;
+}
+
+.post.distill d-byline .authors-affiliations > * {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.post.distill d-byline .byline > div:last-child {
+  grid-column: 2;
+  min-width: 0;
+}
+
+@media (max-width: 999px) {
+  .post.distill d-byline .byline {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .post.distill d-byline .byline > div:last-child {
+    grid-column: 1;
+  }
+}
+
+/* Optional project metadata, independent of Paper/GitHub resource links. */
+.post.distill d-byline .project-view-count:not([hidden]) {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  margin-left: 0.6rem;
+  padding: 0.2rem 0.6rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--global-theme-color) 8%, var(--global-bg-color));
+  color: var(--global-theme-color);
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.post.distill d-byline .project-last-modified {
+  margin-top: 0.75rem;
+}
+
+/* Keep old contribution-note markup working alongside the reusable include. */
+.post :is(.article-note, .contribution-note) {
+  margin: 0 0 1.5rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--global-divider-color);
+  border-left: 4px solid var(--global-theme-color);
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--global-theme-color) 8%, var(--global-bg-color));
+  color: var(--global-text-color);
+  overflow-wrap: anywhere;
+}
+
+.post :is(.article-note, .contribution-note) p {
+  margin: 0 0 0.75rem;
+  line-height: 1.7;
+}
+
+.post :is(.article-note, .contribution-note) > :last-child {
+  margin-bottom: 0;
+}
+
+.post .article-note .article-note-title {
+  font-weight: 600;
+}
+
+/* Wide tables scroll within the article; legacy markup remains supported. */
+.post :is(.article-table, .contribution-metrics) {
+  min-width: 0;
+  max-width: 100%;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+}
+
+.post :is(.article-table, .contribution-metrics) table {
+  width: 100%;
+  min-width: var(--article-table-min-width, 850px);
+  font-size: 0.9rem;
+}
+
+.post :is(.article-table, .contribution-metrics) :is(th, td) {
+  padding: 0.6rem;
+}
+
+/* Leave room for fractions without introducing vertical equation scrollbars. */
+.post :is(article, d-article) mjx-container[jax="CHTML"][display="true"] {
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding-block: 0.5em;
+  overflow-x: auto;
+  overflow-y: hidden;
+}

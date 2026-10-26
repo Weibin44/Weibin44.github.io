@@ -2,7 +2,7 @@
 layout: distill
 title: Moment-guided edge sampling
 date: 2026-09-29
-last_modified_at: 2026-10-21
+last_modified_at: 2026-10-26
 authors:
   - name: Weibin Cai
     affiliations:
@@ -27,8 +27,6 @@ toc:
   - name: 3. Results
   - name: BibTeX
 ---
-
-<script defer src="{{ '/assets/js/project-last-modified.js' | relative_url }}" data-last-modified="{{ page.last_modified_at | date: '%B %d, %Y' }}"></script>
 
 <figure style="max-width: 680px; margin: 0 auto 1.5rem; text-align: center;">
   <img src="{{ '/assets/img/projects/graph/moment-guided-edge-sampling/moments_jojo.png' | relative_url }}" alt="JoJo illustration" style="display: block; width: 100%; height: auto;">

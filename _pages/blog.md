@@ -112,13 +112,10 @@ pagination:
                     {% else %}
                       {% assign read_time = post.feed_content | strip_html | number_of_words | divided_by: 180 | plus: 1 %}
                     {% endif %}
-                    {% assign year = post.date | date: "%Y" %}
-
                     <p class="post-meta">
                       {{ read_time }} min read &nbsp; &middot; &nbsp;
+                      {% include post_date.liquid post=post %}
                       <span class="goatcounter-views" data-goatcounter-path="{{ post.url | relative_url }}" hidden></span>
-                      <a href="{{ year | prepend: '/blog/' | relative_url }}">
-                        <i class="fa-solid fa-calendar fa-sm"></i> {{ year }} </a>
                     </p>
                   </div>
                 </div>
@@ -174,7 +171,7 @@ pagination:
       <p>{{ post.description }}</p>
       <p class="post-meta">
         {{ read_time }} min read &nbsp; &middot; &nbsp;
-        {{ post.date | date: '%B %d, %Y' }}
+        {% include post_date.liquid post=post %}
         <span class="goatcounter-views" data-goatcounter-path="{{ post.url | relative_url }}" hidden></span>
         {% if post.external_source %}
         &nbsp; &middot; &nbsp; {{ post.external_source }}

@@ -79,7 +79,7 @@ Add your actual update here.
 - 作者高亮：修改 `_config.yml` 的 `scholar.first_name`、`scholar.last_name`。
 - 项目：复制 `_projects/` 中喜欢的示例，修改标题、简介、`img`、`importance`、`category` 和正文；分类须与项目列表的 `display_categories` 一致。
 - 项目正文需要显示 PDF 首页时，写 `{% include pdf_preview.liquid path="/assets/img/projects/LLMs/pace-rag.pdf" caption="PACE-RAG overview." width="600px" %}`，替换 PDF 路径和说明即可。预览图由浏览器直接从 PDF 渲染，无需另外维护 PNG；点击图可打开原文件，caption 显示在图下方。`width` 可省略，默认 600px。
-- Project 和 Blog 的详情页正文宽度设为 780px，位于 `_config.yml` 的 `defaults`（分别对应 `projects` 和 `posts`）。修改数值后运行 `docker compose restart jekyll`；列表页宽度不受影响。
+- 普通 Project 和 Blog 详情页正文宽度设为 780px，位于 `_config.yml` 的 `defaults`；Distill 页面沿用其正文网格。Distill 作者信息布局、说明框、宽表格及公式样式统一在 `assets/css/article-components.css` 维护，用法见 [共享文章组件](docs/ARTICLE_COMPONENTS.md)，不需要在每篇文章中重复 `_styles`。修改 `_config.yml` 后运行 `docker compose restart jekyll`。
 - 项目末尾只显示 BibTeX：在 `_bibliography/papers.bib` 中维护论文条目，在项目正文末尾加入 `## BibTeX`、`{% nocite cai2026less %}` 和 `{% bibliography --cited --group_by none --template bibtex_only %}`，将示例键替换为自己的论文键。`_layouts/bibtex_only.liquid` 负责从同一条目生成可复制的代码块。`_projects/pace_rag.md` 是示例；Moment-guided 项目及两篇博客示例目前没有对应论文，因此暂不添加引用。
 - 简历：现在导航栏 CV 直接下载 PDF。把自己的文件上传为 `assets/pdf/cv.pdf`，将 `_data/socials.yml` 中 `cv_pdf` 改为 `/assets/pdf/cv.pdf`。目前指向模板的 `example_pdf.pdf`，尚不是你的简历。`_data/cv.yml` 保留备用，修改它不会改变 PDF。旧 `/cv/` 地址自动跳转到同一个 PDF。
 - Markdown 文件最上方 `---` 之间是 YAML 配置，用空格缩进；其余部分为正文。

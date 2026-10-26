@@ -55,7 +55,7 @@ horizontal: false
 
   .projects .card-title {
     font-size: 1.1rem;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.6rem;
     transition: color 0.2s ease;
   }
 
@@ -64,7 +64,8 @@ horizontal: false
   }
 
   .projects .card-text {
-    font-size: 0.7rem;
+    font-size: 0.85rem;
+    line-height: 1.5;
   }
 
   .projects .github-icon {

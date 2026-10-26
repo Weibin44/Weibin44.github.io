@@ -6,8 +6,9 @@ date: 2026-10-26
 last_modified_at: 2026-10-26
 tags: agent memory personalization
 categories: research
-featured: false
+featured: true
 related_posts: false
+bibliography: personalized-agent-memory-references.bib
 authors:
   - name: Weibin Cai
     affiliations:
@@ -26,9 +27,9 @@ As AI automates more research, papers are appearing faster, with widely varying 
 
 ## iAgent
 
-[GitHub issue #4](https://github.com/agiresearch/iAgent/issues/4)
+[Paper](https://aclanthology.org/2025.findings-acl.928/) · [GitHub issue #4](https://github.com/agiresearch/iAgent/issues/4)
 
-I found potential information leakage in the dataset. The following example comes from the book dataset.
+I found potential information leakage in the iAgent dataset<d-cite key="xu-etal-2025-iagent"></d-cite>. The following example comes from the book dataset.
 
 **User 51's instruction:**
 
@@ -38,16 +39,16 @@ I found potential information leakage in the dataset. The following example come
 
 > **Defeating the Totalitarian Lie: A Former Hitler Youth Warns America**
 
-I initially expected LLM-based agents to perform worse on recommendation tasks than traditional approaches, such as graph-based methods. However, the results reported in iAgent and MemRec show substantial gains over graph-based baselines. My current hypotheses focus on two factors:
+I initially expected LLM-based agents to perform worse on recommendation tasks than traditional approaches, such as graph-based methods. However, the results reported in iAgent<d-cite key="xu-etal-2025-iagent"></d-cite> and MemRec<d-cite key="chen-etal-2026-memrec"></d-cite> show substantial gains over graph-based baselines. My current hypotheses focus on two factors:
 
 1. **Explicit and highly specific user intent.** In the iAgent example above, the user instruction describes the target item in considerable detail. I doubt users would typically provide such detailed descriptions and requirements in practice. This makes the task resemble a “word game” of matching a description to an item, which plays to an LLM's strengths.
 2. **Cold-start items.** In the book dataset, many items have no recorded interactions. Recommendations therefore rely heavily on item text and user instructions, leaving less interaction structure for graph-based methods to use.
 
 ## PersonaMem-v3
 
-[GitHub pull request #10](https://github.com/bowen-upenn/PersonaMem-v3/pull/10)
+[Paper](https://arxiv.org/abs/2608.21381) · [GitHub pull request #10](https://github.com/bowen-upenn/PersonaMem-v3/pull/10)
 
-This PR focuses on the personalized recommendation task (personalized feed ranking). It provides four contributions:
+This PR focuses on the personalized recommendation task (personalized feed ranking) in PersonaMem-v3<d-cite key="jiang2026personamem"></d-cite>. It provides four contributions:
 
 - Identifies limitations of zero-clipped NDCG in evaluating rankings.
 - Adds a min–max NDCG function for optional use. Evaluation still uses the original NDCG.
@@ -105,7 +106,7 @@ With `Qwen2.5-1.5B-Instruct`, neither method consistently outperforms random ran
 
 ## Acknowledgment
 
-Thanks to [Weixin Chen](https://weixinchen.com/), author of [MemRec](https://github.com/rutgerswiselab/MemRec), for the discussions and exchange of ideas!
+Thanks to [Weixin Chen](https://weixinchen.com/), author of MemRec<d-cite key="chen-etal-2026-memrec"></d-cite>, for the discussions and exchange of ideas!
 
 ## Cite this post
 
